@@ -6,16 +6,52 @@ html {
     padding: 0;
 }
 
+.material-symbols-outlined {
+    color: rgb(41, 41, 41);
+    font-variation-settings:
+        'FILL' 1;
+}
+
+.material-symbols-outlined.white {
+    color: white;
+}
+
+.material-symbols-outlined.cards {
+    font-size: 4rem;
+    color: white;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
 }
 
 .sidebar {
     display: grid;
-    grid-column: 1 / 2;
     background-color: #ff6565;
+    grid-column: 1/2;
     grid-row: span 3;
+}
+
+.side-logo {
+    font-size: 2.5rem;
+    color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .header {
@@ -50,6 +86,11 @@ html {
     align-items: center;
     gap: 10px;
     background-color: orange;
+}
+
+#bell {
+    font-variation-settings:
+        'FILL' 0;
 }
 
 .header-section-2 {
@@ -101,7 +142,13 @@ html {
 .project-icons {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 10px;
+}
+
+.project-icons>div {
+    font-variation-settings:
+        'FILL' 0;
 }
 
 .announcements-container {
