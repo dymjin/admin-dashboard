@@ -131,7 +131,7 @@ div[class$="-container"]>div[class$="-title"] {
 }
 
 .profile-badge {
-    background: green;
+    background: center / contain no-repeat url(imgs/profile-pic-1.jpg);
     border-radius: 60px;
     min-width: 50px;
     height: 50px;
@@ -253,7 +253,7 @@ div[class$="-container"]>div[class$="-title"] {
     gap: 10px;
 }
 
-.announcements > div {
+.announcements>div {
     height: 60px;
     overflow: hidden;
 }
@@ -320,9 +320,23 @@ div[class$="-container"]>div[class$="-title"] {
     color: black;
 }
 
-.trending-item-badge {
+div[class*="trending-item-"] {
     border-radius: 60px;
     min-width: 50px;
     height: 50px;
-    background: green;
+}
+
+.trending-item-badge-1 {
+    background: center / contain no-repeat url(imgs/profile-pic-1.jpg);
+}
+
+.trending-item-badge-2 {
+    background: center / contain no-repeat url(imgs/png-transparent-paper-box-computer-icons-symbol-random-icons-miscellaneous-angle-text-thumbnail.png);
+}
+
+.trending-item-badge-3 {
+    background: center / 190% no-repeat url(imgs/photo-1481349518771-20055b2a7b24.avif);
+}
+.trending-item-badge-4 {
+    background: center / contain no-repeat url(imgs/DpfGhyLVAAAzxkq.jpg);
 }
