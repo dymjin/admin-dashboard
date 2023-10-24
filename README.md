@@ -1,1 +1,1 @@
-# admin-dashboard
+Admin dashboard project to test grid layout knowledge. Icons from google material icons. Profile badges found on google. Theme by me. Live at: https://dymjin.github.io/admin-dashboard/
