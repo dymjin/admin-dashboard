@@ -7,6 +7,10 @@ html {
     font-family: 'Gabarito', sans-serif;
 }
 
+div[class$="-container"]>div[class$="-title"] {
+    font-size: 1.5rem;
+}
+
 .material-symbols-outlined {
     color: rgb(41, 41, 41);
     font-variation-settings:
@@ -79,7 +83,7 @@ html {
     grid-template-rows: 3.5rem;
     padding: 1rem 3rem;
     align-items: center;
-    box-shadow: 0px 5px 9px 0px rgb(148, 148, 148);
+    box-shadow: 0px 3px 9px 0px rgb(165, 165, 165);
     z-index: 1;
     gap: 20px;
 }
@@ -146,7 +150,7 @@ html {
 }
 
 .profile-badge.big {
-    width: 70px;
+    min-width: 70px;
     height: 70px;
 }
 
@@ -154,7 +158,7 @@ html {
     font-size: 1rem;
 }
 
-.intro-msg  {
+.intro-msg {
     font-size: 2rem;
 }
 
@@ -166,7 +170,7 @@ html {
     gap: 20px;
 }
 
-.header-nav > div {
+.header-nav>div {
     background-color: #ff6565;
     padding: 0.6rem 2rem;
     border-radius: 50px;
@@ -176,36 +180,65 @@ html {
 
 .main {
     grid-column: 2 / 3;
-    background-color: #9bff61;
+    background-color: #e2e2e2;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
+    padding: 1.5rem;
+}
+
+.main>* {
+    margin-top: 1rem;
 }
 
 .projects-container {
     grid-row: span 2;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 10px;
 }
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .projects>div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    height: 250px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 2rem;
+    grid-template-rows: 1fr max-content;
+    border-radius: 0.5rem;
+    border-left: 10px solid #ff6565;
+    box-shadow: 3px 3px 5px 0px rgb(180, 180, 180);
+}
+
+.project-text {
+    grid-row: span 2;
+}
+
+.project-text>p {
+    color: rgb(102, 102, 102);
+}
+
+.project-title {
+    font-size: 1.3rem;
 }
 
 .project-icons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-self: end;
+    gap: 35px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 3px 5px 0px rgb(184, 184, 184);
+    width: max-content;
 }
 
 .project-icons>div {
@@ -218,13 +251,39 @@ html {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: burlywood;
+}
+
+.announcements > div {
+    height: 60px;
+    overflow: hidden;
+}
+
+.announcement-title {
+    font-size: 1rem;
+}
+
+.announcement-text {
+    color: rgb(102, 102, 102);
+    font-size: 0.8rem;
+    overflow: hidden;
 }
 
 .announcements {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    min-width: 250px;
+    box-shadow: 3px 3px 5px 0px rgb(180, 180, 180);
+}
+
+.announcements>div:not(:last-child) {
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
 }
 
 .trending-container {
@@ -232,17 +291,38 @@ html {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: rgb(236, 255, 64);
 }
 
 .trending-items {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 3px 3px 5px 0px rgb(180, 180, 180);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
 .trending-items>div {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
     align-items: center;
+}
+
+.description {
+    color: rgb(102, 102, 102);
+}
+
+.social {
+    color: black;
+}
+
+.trending-item-badge {
+    border-radius: 60px;
+    min-width: 50px;
+    height: 50px;
+    background: green;
 }
